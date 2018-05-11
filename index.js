@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { h, render, Text } = require('ink');
 const Box = require('ink-box');
 const Gradient = require('ink-gradient');
