@@ -8,4 +8,6 @@ Personal command line interface.
 npx timwang-cli
 ```
 
-Built with [Ink](https://github.com/vadimdemedes/ink).
+Build with [Ink](https://github.com/vadimdemedes/ink).
+
+MIT LICENSE
