@@ -1,0 +1,42 @@
+{
+ "name": "timwang-cli",
+ "version": "1.0.0",
+ "description": "The Tim Wang CLI",
+ "bin": "./dist/index.js",
+ "repository": "https://github.com/timwangdev/timwang-cli.git",
+ "author": "Tim Wang <tim@thenetcircle.com>",
+ "license": "MIT",
+ "files": [
+   "dist/"
+ ],
+ "dependencies": {
+  "ink": "^0.4.0",
+  "ink-big-text": "^0.2.0",
+  "ink-box": "^0.1.0",
+  "ink-gradient": "^0.1.1",
+  "ink-link": "^0.2.0",
+  "ink-select-input": "^1.1.0",
+  "opn": "^5.3.0"
+ },
+ "devDependencies": {
+  "@babel/core": "^7.0.0-beta.46",
+  "@babel/cli": "^7.0.0-beta.46",
+  "@babel/node": "^7.0.0-beta.46",
+  "@babel/plugin-transform-react-jsx": "^7.0.0-beta.46"
+ },
+ "scripts": {
+  "start": "babel-node index.js",
+  "build": "babel index.js -d dist",
+  "prepublish": "yarn build"
+ },
+ "babel": {
+  "plugins": [
+   [
+    "@babel/plugin-transform-react-jsx",
+    {
+     "pragma": "h"
+    }
+   ]
+  ]
+ }
+}
