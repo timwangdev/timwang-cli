@@ -6,7 +6,6 @@ const Gradient = require('ink-gradient');
 const BigText = require('ink-big-text');
 const SelectInput = require('ink-select-input');
 const Link = require('ink-link');
-
 const opn = require('opn');
 
 const items = [{
@@ -21,7 +20,23 @@ const items = [{
 }, {
 	label: 'Steam',
 	value: 'https://steamcommunity.com/id/timwangme'
+}, {
+	label: 'Ask Me Anything',
+	value: 'https://github.com/timwangdev/ama'
+}, {
+	label: 'Contact',
+	value: 'mailto:tim.wangyao@gmail.com'
+}, {
+	label: 'Exit',
+	value: 'Exit'
 }];
+
+const onSelect = (item) => {
+	if (item.value === 'Exit') {
+		return process.exit(0);
+	}
+	opn(item.value);
+};
 
 render(
 	<div>
@@ -36,9 +51,9 @@ render(
 		<br/>
 		<br/>This is my command line interface.
 		<br/>Select one item from the list:
-		<br/><SelectInput items={items} onSelect={(item) => opn(item.value)}/>
+		<br/><SelectInput items={items} onSelect={onSelect}/>
 		<br/>
 		<Link url="https://github.com/timwangdev/timwang-cli">View Source</Link>
-		<br/><Text gray>Press [↑] [↓], or [K] [J] to navigate, [Enter] to select, [ESC] or [Ctrl] + [C] to exit.</Text>
+		<br/><Text gray>Press [↑] [↓], or [K] [J] to navigate, [Enter] to select, [Ctrl] + [C] to exit.</Text>
 	</div>
 );
