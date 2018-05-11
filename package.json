@@ -1,6 +1,6 @@
 {
  "name": "timwang-cli",
- "version": "1.0.2",
+ "version": "1.0.3",
  "description": "The Tim Wang CLI",
  "bin": "./dist/index.js",
  "repository": "https://github.com/timwangdev/timwang-cli.git",
